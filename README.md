@@ -94,31 +94,31 @@
 ## Скриншоты
 
 ### Окно авторизации
-![Auth_window](screenshots\Auth_window.png)
+![Auth_window](screenshots/auth_window.png)
 
 ### Главное окно (роль: Администратор)
-![Main_window](screenshots\Main_window.png)
+![Main_window](screenshots/main_window.png)
 
 ### Вкладка «Сотрудники» (роль: Администратор)
-![Employees_tab](screenshots\Employees_tab.png)
+![Employees_tab](screenshots/employees_tab.png)
 
 ### Вкладка «Должности» (роль: Администратор)
-![Position_tab](screenshots\Position_tab.png)
+![Position_tab](screenshots/position_tab.png)
 
 ### Вкладка «Рейсы» (роль: Администратор)
-![Trips_tab](screenshots\Trips_tab.png)
+![Trips_tab](screenshots/trips_tab.png)
 
 ### Вкладка «Состав бригады» (роль: Администратор)
-![Brigade_composition_tab](screenshots\Brigade_composition_tab.png)
+![Brigade_composition_tab](screenshots/brigade_composition_tab.png)
 
 ### Вкладка «Календарь смен» (роль: Администратор)
-![Shift_calendar_tab](screenshots\Shift_calendar_tab.png)
+![Shift_calendar_tab](screenshots/shift_calendar_tab.png)
 
 ### Вкладка «Календарь смен» в графическом виде (роль: Сотрудник)
-![Shift_calendar](screenshots\Shift_calendar.png)
+![Shift_calendar](screenshots/shift_calendar.png)
 
 ### Вкладка «Учёт зарплаты» (роль: Администратор)
-![Payroll_tab](screenshots\Payroll_tab.png)
+![Payroll_tab](screenshots/payroll_tab.png)
 
 
 ## Лицензия
