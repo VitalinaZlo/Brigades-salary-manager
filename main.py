@@ -1500,33 +1500,41 @@ class DatabaseApp:
                     start_date = start_datetime.date()
                     end_date = end_datetime.date()
 
-                info_text += f"• Путь следования: \n «{trip_name}»\n\n"
-                # Проверяем, начинается и заканчивается ли смена в один день
-                if start_date == end_date:
-                    # Если смена в один день и это выбранный день
-                    if start_date.day == selected_day:
-                        info_text += f"• Начало смены: \n {start_time}\n\n"
-                        info_text += f"• Конец смены: \n {end_time}\n\n"
-                else:
-                    # Смена длится несколько дней
-                    if start_date.day == selected_day:
-                        # Первый день смены: показываем только время начала
-                        info_text += f"• Начало смены: \n {start_time}\n\n"
-                        info_text += f"• Конец смены: \n {end_str}\n\n"
-                    elif end_date.day == selected_day:
-                        # Последний день смены: показываем только время конца
-                        info_text += f"• Начало смены: \n {start_str}\n\n"
-                        info_text += f"• Конец смены: \n {end_time}\n\n"
+                    # Вычисляем длительность смены
+                    shift_duration = end_datetime - start_datetime
+                    total_seconds = int(shift_duration.total_seconds())
+                    hours = total_seconds // 3600
+                    minutes = (total_seconds % 3600) // 60
+                    seconds = total_seconds % 60
+                    duration_str = f"{hours:02d}:{minutes:02d}:{seconds:02d}"
+
+                    info_text += f"• Путь следования: \n «{trip_name}»\n\n"
+                    # Проверяем, начинается и заканчивается ли смена в один день
+                    if start_date == end_date:
+                        # Если смена в один день и это выбранный день
+                        if start_date.day == selected_day:
+                            info_text += f"• Начало смены: \n {start_time}\n\n"
+                            info_text += f"• Конец смены: \n {end_time}\n\n"
                     else:
-                        # Промежуточный день: показываем обе даты
-                        info_text += f"• Начало смены: \n {start_str}\n\n"
-                        info_text += f"• Конец смены: \n {end_str}\n\n"
+                        # Смена длится несколько дней
+                        if start_date.day == selected_day:
+                            # Первый день смены: показываем только время начала
+                            info_text += f"• Начало смены: \n {start_time}\n\n"
+                            info_text += f"• Конец смены: \n {end_str}\n\n"
+                        elif end_date.day == selected_day:
+                            # Последний день смены: показываем только время конца
+                            info_text += f"• Начало смены: \n {start_str}\n\n"
+                            info_text += f"• Конец смены: \n {end_time}\n\n"
+                        else:
+                            # Промежуточный день: показываем обе даты
+                            info_text += f"• Начало смены: \n {start_str}\n\n"
+                            info_text += f"• Конец смены: \n {end_str}\n\n"
 
+                    info_text += f"• Время смены: \n {duration_str}\n\n"
+                    info_text += f"• Смена в составе бригады: \n «{brigade_name}»\n\n"
 
-                info_text += f"• Время в пути: \n {arrival_time}\n\n"
-                info_text += f"• Смена в составе бригады: \n «{brigade_name}»\n\n"
-
-                self.shift_info_label.configure(text=info_text.strip())
+                    self.shift_info_label.configure(text=info_text.strip())
+                    break  # Показываем информацию только о первой смене на день
 
         def on_day_click(day):
             update_info_panel(day)

@@ -6,7 +6,7 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 # ==========================================================================
 # Параметры базы данных
 # ==========================================================================
-DB_NAME = "Synergy.Zlobova.SalaryAccounting"
+DB_NAME = "SalaryAccounting"
 DB_USER = "postgres"
 DB_PASSWORD = "root"
 DB_HOST = "localhost"
