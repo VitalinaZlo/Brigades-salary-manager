@@ -1,6 +1,7 @@
 # Приложения для учёта заработной платы локомотивных бригад
 
-![License](https://img.shields.io/github/license/VitalinaZlo/Brigades-salary-manager?style=flat-square&label=License)
+![Release](https://img.shields.io/github/v/release/VitalinaZlo/Brigades-salary-manager?style=flat-square&label=Release&color=purple)
+![License](https://img.shields.io/github/license/VitalinaZlo/Brigades-salary-manager?style=flat-square&label=License&color=e5573e)
 ![Python](https://img.shields.io/badge/build-3.11-brightgreen?style=flat-square&label=Python&color=52b4e5)
 ![PostgreSQL](https://img.shields.io/badge/build-17-brightgreen?style=flat-square&label=PostgreSQL&color=032677)
 ![Status](https://img.shields.io/badge/build-completed-green?style=flat-square&label=Status&color=3dc322)
