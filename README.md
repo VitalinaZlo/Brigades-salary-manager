@@ -54,6 +54,10 @@
 - База данных PostgreSQL `SalaryAccounting` хранит данные о сотрудниках, должностях, рейсах, бригадах, сменах и зарплате;  
 - Дамп базы данных доступен в файле `src/data/salary_accounting_dump.sql`.  
 
+### Информация о пользователях
+- Логины и пароли для входа в аккаунты с разными ролями доступны в файле `login.txt`.
+
+Подробнее обо 'njv можно почитать в ![Wiki проекта](https://github.com/VitalinaZlo/Brigades-salary-manager/wiki). 
 
 ## Установка и запуск
 
@@ -78,6 +82,9 @@
         psql -U postgres -h localhost -p 5432 -d "SalaryAccounting" -f "src\\data\\salary_accounting_dump.sql"
         ```
     - Введите пароль `root`.
+
+3. **Запустите приложение**:
+- Дважды щёлкните по файлу `SalaryManager.exe` (автономный исполняемый файл, установка не требуется).
 
 
 ## Принцип работы
