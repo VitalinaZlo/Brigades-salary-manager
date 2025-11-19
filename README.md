@@ -57,7 +57,7 @@
 ### Информация о пользователях
 - Логины и пароли для входа в аккаунты с разными ролями доступны в файле `login.txt`.
 
-Подробнее обо 'njv можно почитать в ![Wiki проекта](https://github.com/VitalinaZlo/Brigades-salary-manager/wiki). 
+Подробнее обо этом можно почитать в [Wiki проекта](https://github.com/VitalinaZlo/Brigades-salary-manager/wiki). 
 
 ## Установка и запуск
 
